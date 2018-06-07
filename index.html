@@ -1,0 +1,52 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:boolx"
+             x:Class="boolx.MainPage">
+    <ListView HasUnevenRows="True" ItemsSource="{}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        
+                    </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="{Binding              }"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+	
+	
+	
+	
+	namespace boolx
+{
+	public partial class MainPage : ContentPage
+	{
+		public MainPage()
+		{
+			InitializeComponent();
+            var books = GetBoolxes();
+            
+		}
+        private List<boolx> GetBoolxes()
+        {
+            var books = new List<boolx>();
+            books.Add(new booktype()
+            {
+                bookname = "",
+                bookauthor = "",
+                bookprice = ,
+                bookrating =
+            }
+          );
+
+        }
+
+        async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page());
